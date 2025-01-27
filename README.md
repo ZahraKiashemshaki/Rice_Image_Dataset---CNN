@@ -5,8 +5,8 @@ This repository contains the implementation of a Convolutional Neural Network (C
 
 ## Model Architecture
 The CNN model consists of a simple architecture with:
-- One Convolutional Layer
-- One MaxPooling Layer
+- 4 Convolutional Layer
+- 4 MaxPooling Layer
 - One Fully Connected Dense Layer
 
 ### Model Summary:
@@ -21,28 +21,11 @@ The CNN model consists of a simple architecture with:
 - **Loss Function**: Categorical Crossentropy
 
 ## Results
-- **Test Accuracy**: 90.16%
+- **Test Accuracy**: 98.16%
 
 ## Dataset
 The dataset used is the Rice Image Dataset available on Kaggle. It consists of several classes of rice images used for training, validation, and testing.
 
-## How to Use
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/rice-classification-cnn.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd rice-classification-cnn
-    ```
-3. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-4. Run the training script:
-    ```bash
-    python train.py
-    ```
 
 ## Visualizations
 The following plots show the training and validation accuracy and loss over the epochs:
