@@ -1,7 +1,7 @@
 
 # Rice Image Classification using CNN
 
-This repository contains the implementation of a Convolutional Neural Network (CNN) for classifying rice images from the [Rice Image Dataset](https://www.kaggle.com/datasets/muratkokludataset/rice-image-dataset). The model is designed using TensorFlow and Keras and achieves an accuracy of 90.16% on the test set.
+This repository contains the implementation of a Convolutional Neural Network (CNN) for classifying rice images from the [Rice Image Dataset](https://www.kaggle.com/datasets/muratkokludataset/rice-image-dataset). The model is designed using TensorFlow and Keras and achieves an accuracy of 98.61% on the test set.
 
 ## Model Architecture
 The CNN model consists of a simple architecture with:
