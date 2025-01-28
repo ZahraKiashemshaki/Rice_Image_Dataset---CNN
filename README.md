@@ -1,44 +1,60 @@
+# Rice Image Classification Using CNN  
 
-# Rice Image Classification using CNN
+This repository provides the implementation of a Convolutional Neural Network (CNN) for classifying rice images from the [Rice Image Dataset](https://www.kaggle.com/datasets/muratkokludataset/rice-image-dataset). The model, developed using TensorFlow and Keras, achieves a test accuracy of **98.61%**.  
 
-This repository contains the implementation of a Convolutional Neural Network (CNN) for classifying rice images from the [Rice Image Dataset](https://www.kaggle.com/datasets/muratkokludataset/rice-image-dataset). The model is designed using TensorFlow and Keras and achieves an accuracy of 98.61% on the test set.
+---
 
-## Model Architecture
-The CNN model consists of a simple architecture with:
-- 4 Convolutional Layer
-- 4 MaxPooling Layer
-- One Fully Connected Dense Layer
+## Key Features  
 
-### Model Summary:
-- **Convolutional Layer**: 32 filters, kernel size of 3x3, ReLU activation
-- **Pooling Layer**: MaxPooling with a pool size of 2x2
-- **Fully Connected Layer**: Dense layer with softmax activation for classification
+### Dataset Handling  
+- Efficiently loads images from subdirectories while handling hidden files and varying file formats.  
 
-## Training Details
-- **Epochs**: 4
-- **Batch Size**: As determined by the data generator
-- **Optimizer**: Adam
-- **Loss Function**: Categorical Crossentropy
+### Data Preprocessing  
+- Resizes all images to uniform dimensions.  
+- Normalizes pixel intensities for better model performance.  
+- Splits the dataset into training, validation, and testing subsets.  
 
-## Results
-- **Test Accuracy**: 98.16%
+### Visualization  
+- Displays dataset distributions and sample images for each rice type.  
+- Generates statistics, such as image count, average pixel intensity, and aspect ratios.  
 
-## Dataset
-The dataset used is the Rice Image Dataset available on Kaggle. It consists of several classes of rice images used for training, validation, and testing.
+---
+
+## Model Architecture  
+The CNN model is designed with the following key components:  
+- **Convolutional Layer**: 32 filters, kernel size 3x3, ReLU activation.  
+- **Pooling Layer**: MaxPooling with a 2x2 pool size.  
+- **Dropout**: To mitigate overfitting.  
+- **Fully Connected Layer**: Dense layer with softmax activation for multi-class classification.  
+
+### Training Details  
+- **Epochs**: 4  
+- **Batch Size**: Determined dynamically by the data generator.  
+- **Optimizer**: Adam  
+- **Loss Function**: Categorical Crossentropy  
+
+### Training and Evaluation  
+- Implements real-time data augmentation for robust learning.  
+- Evaluates model accuracy and loss on the test dataset.  
+- Visualizes training performance using accuracy and loss curves.  
+
+---
+
+## Results  
+- **Test Accuracy**: **98.61%**  
+
+---
+
+## Dataset  
+The dataset used is the **Rice Image Dataset**, available on Kaggle. It contains multiple classes of rice images, divided into training, validation, and testing subsets for classification tasks.  
+
+---
 
 
-## Visualizations
-The following plots show the training and validation accuracy and loss over the epochs:
+## License  
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.  
 
-### Model Accuracy
-![Accuracy Plot](path/to/accuracy_plot.png)
+--- 
 
-### Model Loss
-![Loss Plot](path/to/loss_plot.png)
-
-## Contributing
-Contributions are welcome! Please feel free to submit a pull request or open an issue.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This revision improves clarity, flow, and professionalism while ensuring all original details are preserved. Let me know if you'd like further adjustments!
 
