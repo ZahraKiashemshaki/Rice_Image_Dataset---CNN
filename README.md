@@ -10,7 +10,8 @@ This repository provides the implementation of a Convolutional Neural Network (C
 - Efficiently loads images from subdirectories while handling hidden files and varying file formats.  
 
 ### Data Preprocessing  
-- Resize all images to uniform dimensions.  
+- Resize all images to uniform dimensions.
+- Moreover, we should resize the model 224*224 for AlexNet with 3 channels
 - Normalizes pixel intensities for better model performance.  
 - Splits the dataset into training, validation, and testing subsets.
 - The Chi-Square test is used for analyzing the class distribution in image datasets, particularly when you want to check if the classes (labels) are evenly distributed. In image classification tasks, an imbalance in class distribution can lead to biased model performance. By applying the Chi-Square test to the label counts, you can detect potential imbalances and decide if data preprocessing like resampling or class weighting is necessary before training a model.
