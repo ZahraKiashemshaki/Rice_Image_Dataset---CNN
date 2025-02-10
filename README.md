@@ -12,7 +12,8 @@ This repository provides the implementation of a Convolutional Neural Network (C
 ### Data Preprocessing  
 - Resize all images to uniform dimensions.  
 - Normalizes pixel intensities for better model performance.  
-- Splits the dataset into training, validation, and testing subsets.  
+- Splits the dataset into training, validation, and testing subsets.
+- The Chi-Square test is used for analyzing the class distribution in image datasets, particularly when you want to check if the classes (labels) are evenly distributed. In image classification tasks, an imbalance in class distribution can lead to biased model performance. By applying the Chi-Square test to the label counts, you can detect potential imbalances and decide if data preprocessing like resampling or class weighting is necessary before training a model.
 
 ### Visualization  
 - Displays dataset distributions and sample images for each rice type.  
