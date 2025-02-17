@@ -35,7 +35,7 @@ The CNN model is designed with the following key components:
 - **Fully Connected Layer**: Dense layer with softmax activation for multi-class classification.  
 
 ### Training Details  
-- **Epochs**: 5  
+- **Epochs**: 10 
 - **Batch Size**: Determined dynamically by the data generator.  
 - **Optimizer**: Adam  
 - **Loss Function**: Categorical Crossentropy  
@@ -48,9 +48,11 @@ The CNN model is designed with the following key components:
 ---
 
 ## Results  
-- **Test Accuracy**: **96.45%**  
+- **Test Accuracy**: **85.45%**  
 
 ---
+## Evaluation of Multi-Class Image Classification Performance Using ROC Curve and AUC
+A multi-class classification approach was applied using a synthetic dataset consisting of five classes, 1,000 samples, and 20 features. The dataset was divided into training and testing subsets, with 70% allocated for training and 30% for testing. A RandomForestClassifier model was trained on the training data and its performance was evaluated on the test data. To assess model performance, the ROC curve and AUC score were computed for each class. These metrics were derived by binarizing both the true and predicted labels, with the results visualized through ROC curve plots. The AUC values for each class were presented, offering a comprehensive evaluation of the classifier's performance across all categories.
 
 ## Dataset  
 The dataset used is the **Rice Image Dataset**, available on Kaggle. It contains multiple classes of rice images, divided into training, validation, and testing subsets for classification tasks.  
