@@ -1,6 +1,11 @@
-# Rice Image Classification Using CNN and AlexNet Architecture
+# Rice Image Classification Using CNN
 
-This repository provides the implementation of a Convolutional Neural Network (CNN) for classifying rice images from the [Rice Image Dataset](https://www.kaggle.com/datasets/muratkokludataset/rice-image-dataset). The model, developed using TensorFlow and Keras, achieves a test accuracy of **96.45%**.  
+Introduction¶
+Rice is one of the most widely produced grains globally, with numerous genetic varieties. These varieties differ based on characteristics such as texture, shape, and color. By analyzing these distinguishing features, it is possible to classify rice varieties and assess seed quality.
+
+In this study, five rice varieties commonly grown in Turkey—Arborio, Basmati, Ipsala, Jasmine, and Karacadag—were examined. The dataset includes 75,000 grain images, with 15,000 images from each variety.
+
+To classify the data, Artificial Neural Network (ANN) and Deep Neural Network (DNN) algorithms were applied to the feature dataset, while the Convolutional Neural Network (CNN) algorithm was used for the image dataset. 
 
 ---
 
@@ -11,7 +16,7 @@ This repository provides the implementation of a Convolutional Neural Network (C
 
 ### Data Preprocessing  
 - Resize all images to uniform dimensions.
-- Moreover, we should resize the model 224*224 for AlexNet with 3 channels
+- Moreover, we should resize the model 227*227 for AlexNet with 3 channels
 - Normalizes pixel intensities for better model performance.  
 - Splits the dataset into training, validation, and testing subsets.
 - The Chi-Square test is used for analyzing the class distribution in image datasets, particularly when you want to check if the classes (labels) are evenly distributed. In image classification tasks, an imbalance in class distribution can lead to biased model performance. By applying the Chi-Square test to the label counts, you can detect potential imbalances and decide if data preprocessing like resampling or class weighting is necessary before training a model.
