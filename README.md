@@ -35,7 +35,7 @@ The CNN model is designed with the following key components:
 - **Fully Connected Layer**: Dense layer with softmax activation for multi-class classification.  
 
 ### Training Details  
-- **Epochs**: 10 
+- **Epochs**: 8 
 - **Batch Size**: Determined dynamically by the data generator.  
 - **Optimizer**: Adam  
 - **Loss Function**: Categorical Crossentropy  
