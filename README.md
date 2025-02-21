@@ -1,7 +1,7 @@
 # Rice Image Classification Using CNN
 
 Introduction¶
-Rice is one of the most widely produced grains globally, with numerous genetic varieties. These varieties differ based on characteristics such as texture, shape, and color. By analyzing these distinguishing features, it is possible to classify rice varieties and assess seed quality.
+Rice is one of the most widely produced grains globally, with numerous genetic varieties. These varieties differ based on texture, shape, and color. Analyzing these distinguishing features makes it possible to classify rice varieties and assess seed quality.
 
 In this study, five rice varieties commonly grown in Turkey—Arborio, Basmati, Ipsala, Jasmine, and Karacadag—were examined. The dataset includes 75,000 grain images, with 15,000 images from each variety.
 
@@ -11,59 +11,118 @@ To classify the data, Artificial Neural Network (ANN) and Deep Neural Network (D
 
 ## Key Features  
 
-### Dataset Handling  
-- Efficiently loads images from subdirectories while handling hidden files and varying file formats.  
-
-### Data Preprocessing  
-- Resize all images to uniform dimensions.
-- Moreover, we should resize the model 64*64
-- Normalizes pixel intensities for better model performance.  
-- Splits the dataset into training, validation, and testing subsets.
-
-
-### Visualization  
-- Displays dataset distributions and sample images for each rice type.  
-- Generates statistics, such as image count, average pixel intensity, and aspect ratios.  
+Certainly! Below is a professional and concise **README.md** template for your GitHub repository, summarizing everything you did with the dataset. You can customize it further based on your specific project details.
 
 ---
 
-## Model Architecture  
-The CNN model is designed with the following key components:  
-- **Convolutional Layer**: 32 filters, kernel size 3x3, ReLU activation.  
-- **Pooling Layer**: MaxPooling with a 2x2 pool size.  
-- **Dropout**: To mitigate overfitting.  
-- **Fully Connected Layer**: Dense layer with softmax activation for multi-class classification.  
+# Rice Image Classification
 
-### Training Details  
-- **Epochs**: 8 
-- **Batch Size**: Determined dynamically by the data generator.  
-- **Optimizer**: Adam  
-- **Loss Function**: Categorical Crossentropy  
-
-### Training and Evaluation  
-- Implements real-time data augmentation for robust learning.  
-- Evaluates model accuracy and loss on the test dataset.  
-- Visualizes training performance using accuracy and loss curves.  
+This repository contains the implementation of a **multi-class image classification model** to classify different types of rice using a dataset of rice images. The project includes data preprocessing, model training, evaluation, and prediction.
 
 ---
 
-## Results  
-- **Test Accuracy**: **85.45%**  
+## **Dataset**
+The dataset used in this project is the **Rice Image Dataset**, which contains images of five different types of rice:
+- Basmati
+- Ipsala
+- Jasmine
+- Arborio
+- Karacadag
+
+Each class has a set of images that were used for training and testing the model.
 
 ---
-## Evaluation of Multi-Class Image Classification Performance Using ROC Curve and AUC
-A multi-class classification approach was applied using a synthetic dataset consisting of five classes, 1,000 samples, and 20 features. The dataset was divided into training and testing subsets, with 70% allocated for training and 30% for testing. A RandomForestClassifier model was trained on the training data and its performance was evaluated on the test data. To assess model performance, the ROC curve and AUC score were computed for each class. These metrics were derived by binarizing both the true and predicted labels, with the results visualized through ROC curve plots. The AUC values for each class were presented, offering a comprehensive evaluation of the classifier's performance across all categories.
 
-## Dataset  
-The dataset used is the **Rice Image Dataset**, available on Kaggle. It contains multiple classes of rice images, divided into training, validation, and testing subsets for classification tasks.  
+## **Project Overview**
+The goal of this project is to build a deep learning model that can accurately classify rice images into their respective categories. The following steps were performed:
+
+1. **Data Preprocessing**:
+   - Images were resized to `(64, 64)` pixels.
+   - Data augmentation techniques (e.g., rotation, flipping, zooming) were applied to increase dataset diversity and reduce overfitting.
+   - The dataset was split into training (80%) and validation (20%) sets.
+
+2. **Model Architecture**:
+   - A **Convolutional Neural Network (CNN)** was implemented using TensorFlow/Keras.
+   - The model consists of:
+     - Two convolutional blocks with `MaxPooling2D` layers.
+     - A `GlobalAveragePooling2D` layer to reduce spatial dimensions.
+     - A fully connected layer with `Dropout` for regularization.
+     - A `softmax` output layer for multi-class classification.
+
+3. **Model Training**:
+   - The model was compiled using the **Adam optimizer** and **categorical cross-entropy loss**.
+   - Training was performed for 20 epochs with **early stopping** to prevent overfitting.
+   - Data augmentation was applied during training to improve generalization.
+
+4. **Model Evaluation**:
+   - The model achieved a **test accuracy of 94.5%**.
+   - ROC curves and AUC scores were computed to evaluate the model's performance for each class.
+
+5. **Prediction**:
+   - A function was implemented to predict the class of a given rice image.
+   - The model successfully predicted the class of unseen images.
 
 ---
 
+## **Code Structure**
+- **`data_preprocessing.py`**: Script for loading and preprocessing the dataset.
+- **`model_training.py`**: Script for defining, compiling, and training the model.
+- **`evaluation.py`**: Script for evaluating the model using ROC curves and AUC.
+- **`predict.py`**: Script for predicting the class of a new rice image.
 
-## License  
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.  
+---
 
---- 
+## **Results**
+- **Test Accuracy**: 94.5%
+- **ROC Curves**: Visualized for each class to demonstrate the model's ability to distinguish between rice types.
+- **Prediction Example**:
+  ```
+  Trying to load image from: /content/rice_data/Rice_Image_Dataset/Rice_Image_Dataset/Basmati/basmati (11218).jpg
+  Predicted Class: Basmati
+  ```
 
-This revision improves clarity, flow, and professionalism while ensuring all original details are preserved. Let me know if you'd like further adjustments!
+---
 
+## **Requirements**
+To run the code, you need the following Python libraries:
+- TensorFlow/Keras
+- OpenCV
+- NumPy
+- Matplotlib
+- Scikit-learn
+
+Install the dependencies using:
+```bash
+pip install tensorflow opencv-python numpy matplotlib scikit-learn
+```
+
+---
+
+## **Usage**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/rice-image-classification.git
+   cd rice-image-classification
+   ```
+
+2. Run the scripts in the following order:
+   - Data preprocessing: `python data_preprocessing.py`
+   - Model training: `python model_training.py`
+   - Evaluation: `python evaluation.py`
+   - Prediction: `python predict.py`
+
+---
+
+## **Future Work**
+- Experiment with more advanced architectures (e.g., ResNet, EfficientNet).
+- Fine-tune hyperparameters for better performance.
+- Deploy the model as a web application using Flask or Streamlit.
+
+---
+
+## **License**
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to modify this template to better suit your project! Let me know if you need further assistance.
