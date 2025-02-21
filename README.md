@@ -9,12 +9,6 @@ To classify the data, Artificial Neural Network (ANN) and Deep Neural Network (D
 
 ---
 
-## Key Features  
-
-Certainly! Below is a professional and concise **README.md** template for your GitHub repository, summarizing everything you did with the dataset. You can customize it further based on your specific project details.
-
----
-
 # Rice Image Classification
 
 This repository contains the implementation of a **multi-class image classification model** to classify different types of rice using a dataset of rice images. The project includes data preprocessing, model training, evaluation, and prediction.
@@ -122,7 +116,3 @@ pip install tensorflow opencv-python numpy matplotlib scikit-learn
 
 ## **License**
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to modify this template to better suit your project! Let me know if you need further assistance.
