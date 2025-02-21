@@ -51,7 +51,7 @@ The goal of this project is to build a deep learning model that can accurately c
 
 3. **Model Training**:
    - The model was compiled using the **Adam optimizer** and **categorical cross-entropy loss**.
-   - Training was performed for 20 epochs with **early stopping** to prevent overfitting.
+   - Training was performed for 10 epochs with **early stopping** to prevent overfitting.
    - Data augmentation was applied during training to improve generalization.
 
 4. **Model Evaluation**:
